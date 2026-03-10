@@ -542,7 +542,7 @@ body {
   }
 }
 
-/* cinema note */
+/* CINEMA NOTE */
 /* CINEMA NOTE */
 .cinema-note {
   background: #ffffff;
@@ -618,65 +618,90 @@ body {
   margin-top: 0.5rem;
 }
 
-/* trending */
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: #ddd;
+  border-radius: 50%;
+  color: var(--text-dark);
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  background: var(--primary-red);
+  color: var(--text-light);
+}
+
+/* PAGE LAYOUT */
+.page-wrapper {
+  width: 100%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
 /* TRENDING SECTION */
 .trending-section {
-  background: transparent;
-  padding: 0 0 2rem 0;
-  border-radius: 0;
+  width: 100%;
 }
 
 .trending-section h2 {
   font-family: "Kalnia", serif;
-  font-size: 2.2rem;
-  color: var(--text-light);
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
   font-weight: bold;
 }
 
 .trending-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: 1rem;
-  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
 }
 
 .trending-card {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  cursor: pointer;
   transition:
     transform 0.3s ease,
-    background 0.4s ease;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
-  padding: 1rem;
-  display: block;
-  color: inherit;
+    box-shadow 0.3s ease;
   text-decoration: none;
+  color: inherit;
 }
 
 .trending-card:hover {
-  transform: translateY(-5px);
-}
-
-.trending-card.highlight .card-image-wrapper img {
-  aspect-ratio: 2 / 3;
-}
-
-.trending-card.side .card-image-wrapper img {
-  aspect-ratio: 2 / 3;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 .card-image-wrapper {
-  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: 12px;
-  margin-bottom: 1rem;
+  background: #2a2a2a;
 }
 
 .card-image-wrapper img {
   width: 100%;
-  aspect-ratio: 2 / 3;
+  height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
@@ -686,39 +711,47 @@ body {
   transform: scale(1.05);
 }
 
-.rank-badge {
-  position: absolute;
-  top: -12px;
-  left: -12px;
-  width: 45px;
-  height: 45px;
-  background: #ccc;
-  color: var(--text-dark);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
+.trending-card-title {
+  font-family: "Kalnia", serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.4;
+  text-align: center;
 }
 
-.rank-1 {
-  background: gold;
-  color: var(--text-dark);
+/* RESPONSIVE TRENDING GRID */
+@media (max-width: 1024px) {
+  .trending-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.25rem;
+  }
 }
 
-.rank-2 {
-  background: #4caf50;
-  color: var(--text-light);
-}
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
 
-.rank-3 {
-  background: #999;
-  color: var(--text-dark);
-}
+  .trending-section h2 {
+    font-size: 1.5rem;
+  }
 
-.trending-card p {
-  color: var(--text-light);
-  font-weight: 500;
-  font-size: 1rem;
+  .trending-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  .trending-card-title {
+    font-size: 0.85rem;
+  }
+
+  .cinema-note {
+    position: static;
+    top: auto;
+    max-height: none;
+    margin-top: 2rem;
+    width: 100%;
+  }
 }

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/css.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Kaisei+Decol&family=Kalnia:wght@100..700&family=Kite+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>contact</title>
+  </head>
+  <body>
+    <div class="genre-container">
+      <div class="genre-dropdown">
+        <div class="genre-label">GENRE</div>
+        <button class="genre-btn" id="genreBtn">
+          <span class="genre-underline">Pilih Genre</span>
+          <span class="genre-arrow">&#9660;</span>
+        </button>
+        <div class="genre-menu" id="genreMenu">
+          <a href="film.html">Film</a>
+          <a href="genre.html?genre=series">Series</a>
+          <a href="genre.html?genre=horor">Horor</a>
+          <a href="genre.html?genre=romansa">Romansa</a>
+          <a href="genre.html?genre=drama">Drama</a>
+          <a href="genre.html?genre=komedi">Komedi</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <section class="film-detail">
+        <div class="film-detail-card" id="detailCard">
+          <figure class="film-poster">
+            <img id="detailPoster" src="" alt="" loading="lazy" />
+          </figure>
+          <div class="film-detail-text">
+            <h1 id="detailTitle"></h1>
+            <ol class="film-detail-info" id="detailInfo"></ol>
+            <div class="cast-section">
+              <h3>Pemeran Utama</h3>
+              <ol class="cast-list" id="detailCast"></ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="film-synopsis" id="detailSynopsisSection">
+        <h2>Sinopsis</h2>
+        <p id="detailSynopsis"></p>
+      </section>
+
+      <div
+        class="film-detail-unavailable"
+        id="detailFallback"
+        hidden
+        style="text-align: center; margin: 3rem 0"
+      >
+        <h2>Film Tidak Ditemukan</h2>
+        <p>
+          Kembali ke <a href="film.html">daftar film</a> untuk memilih tayangan
+          lain.
+        </p>
+      </div>
+    </main>
+    <script src="js/layout.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/data-film.js"></script>
+    <script src="js/detail-film.js"></script>
+    <script src="js/footer.js"></script>
+  </body>
+</html>
