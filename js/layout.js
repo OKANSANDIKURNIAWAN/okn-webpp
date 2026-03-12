@@ -1,6 +1,6 @@
 function getCurrentPageName() {
   const path = window.location.pathname;
-  const fileName = path.split("/").pop() || "home.html";
+  const fileName = path.split("/").pop() || "index.html";
   return fileName.toLowerCase();
 }
 
@@ -8,7 +8,7 @@ function createSharedLayout() {
   const currentPage = getCurrentPageName();
 
   const navItems = [
-    { href: "home.html", label: "HOME" },
+    { href: "index.html", label: "HOME" },
     { href: "film.html", label: "FILM & SERIES" },
     { href: "aboutus.html", label: "ABOUT US" },
     { href: "contact.html", label: "CONTACT" },
@@ -83,7 +83,7 @@ function createSharedLayout() {
     '<div class="footer-columns">' +
     '<div class="footer-column">' +
     "<h4>MENU</h4>" +
-    '<a href="home.html">Home</a>' +
+    '<a href="index.html">Home</a>' +
     '<a href="film.html">Film & Series</a>' +
     '<a href="aboutus.html">About Us</a>' +
     '<a href="contact.html">Contact</a>' +
