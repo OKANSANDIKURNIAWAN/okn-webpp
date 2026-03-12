@@ -340,7 +340,7 @@ body {
   width: 120%;
   left: -10%;
   height: 6rem;
-  background: #ffffff;
+  background: #960004;
   transform: translateY(-99%);
   z-index: 0;
   filter: url("#liquid-effect");
@@ -350,9 +350,9 @@ body {
 
 .particle {
   position: absolute;
-  background: #f5f5f5;
+  background: #960004;
   border-radius: 50%;
-  top: 50%;
+  top: 100%;
   left: var(--pos-x, 50%);
   width: var(--dim, 5rem);
   height: var(--dim, 5rem);
@@ -753,5 +753,474 @@ body {
     max-height: none;
     margin-top: 2rem;
     width: 100%;
+  }
+}
+
+/* ===== FILM DETAIL PAGE ===== */
+.film-page-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: auto;
+}
+
+/* Left Sidebar Container */
+.film-left-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 280px;
+  flex-shrink: 0;
+}
+
+/* Search Bar */
+.film-search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.8rem;
+  position: sticky;
+  top: 87px;
+  z-index: 99;
+}
+
+.film-search-form {
+  position: relative;
+  width: 60px;
+  height: 50px;
+  background: rgba(255, 0, 0, 0.95);
+  box-sizing: border-box;
+  border-radius: 30px;
+  border: 3px solid rgb(255, 0, 0);
+  padding: 10px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.film-search-form:hover {
+  width: 320px;
+  background: rgba(255, 255, 255, 0.98);
+  border-color: #ff0000;
+  box-shadow: 0 8px 24px rgba(255, 0, 0, 0.2);
+}
+
+.film-search-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  display: none;
+  font-size: 1rem;
+  border-radius: 25px;
+  padding: 0 20px;
+  background: transparent;
+  color: #111111;
+  font-family: "Roboto", sans-serif;
+}
+
+.film-search-input::placeholder {
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.film-search-form:hover .film-search-input {
+  display: block;
+}
+
+.film-search-form .fa-search {
+  box-sizing: border-box;
+  padding: 9px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  border-radius: 50%;
+  color: #ff0000;
+  text-align: center;
+  font-size: 1.1em;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.film-search-form:hover .fa-search {
+  background: #ff0000;
+  color: white;
+}
+
+.film-sidebar {
+  position: sticky;
+  top: 150px;
+  height: fit-content;
+  width: 100%;
+  background: rgba(255, 0, 0, 0.1);
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  padding: 0.4rem;
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.film-sidebar-title {
+  font-family: "Kalnia", serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.film-sidebar-title::after {
+  content: "▼";
+  font-size: 0.8rem;
+  color: #ff0000;
+  transition: transform 0.3s ease;
+}
+
+.film-sidebar-title.collapsed::after {
+  transform: rotate(-90deg);
+}
+
+.film-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 500px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.film-sidebar-menu.collapsed {
+  max-height: 0;
+}
+
+.film-sidebar-menu a {
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.film-sidebar-menu a:hover,
+.film-sidebar-menu a.active {
+  color: #ff0000;
+  border-left-color: #ff0000;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.film-main {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .film-page-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .film-left-sidebar {
+    width: 100%;
+  }
+
+  .film-search-form {
+    width: 50px;
+    height: 50px;
+  }
+
+  .film-search-form:hover {
+    width: 280px;
+  }
+
+  .film-sidebar {
+    position: static;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .film-page-wrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .film-left-sidebar {
+    width: 100%;
+  }
+
+  .film-search-form {
+    width: 45px;
+    height: 45px;
+  }
+
+  .film-search-form:hover {
+    width: 260px;
+  }
+
+  .film-search-input {
+    padding: 0 15px;
+  }
+
+  .film-search-form .fa-search {
+    width: 45px;
+    height: 45px;
+    top: 0;
+    right: 0;
+  }
+
+  .film-sidebar {
+    width: 100%;
+    border: 2px solid #ff0000;
+  }
+
+  .film-sidebar-menu.collapsed {
+    max-height: 0;
+  }
+}
+
+.main-content {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Film Detail Card */
+.film-detail {
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+
+.film-detail-card {
+  display: flex;
+  gap: 3rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.film-poster {
+  flex: 0 0 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.film-poster img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.film-detail-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.film-detail-text h1 {
+  font-family: "Kalnia", serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.film-detail-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.film-detail-info li {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.film-detail-info strong {
+  color: #ff0000;
+  font-weight: 600;
+}
+
+.cast-section {
+  margin-top: 1rem;
+}
+
+.cast-section h3 {
+  font-family: "Kalnia", serif;
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+  font-weight: bold;
+}
+
+.cast-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cast-list li {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  color: #d0d0d0;
+  padding-left: 1rem;
+}
+
+.cast-list li::before {
+  content: "• ";
+  color: #ff0000;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+/* Film Synopsis */
+.film-synopsis {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  margin-bottom: 2rem;
+}
+
+.film-synopsis h2 {
+  font-family: "Kalnia", serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+  font-weight: bold;
+  border-bottom: 2px solid #ff0000;
+  padding-bottom: 1rem;
+}
+
+.film-synopsis p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #e0e0e0;
+  line-height: 1.8;
+  margin: 0;
+  text-align: justify;
+}
+
+.film-detail-unavailable {
+  background: rgba(255, 0, 0, 0.1);
+  border: 2px solid #ff0000;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  color: #ff0000;
+}
+
+.film-detail-unavailable h2 {
+  font-family: "Kalnia", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.film-detail-unavailable a {
+  color: #ff0000;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.film-detail-unavailable a:hover {
+  color: #ffffff;
+  background: #ff0000;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Responsive Film Detail */
+@media (max-width: 1024px) {
+  .film-detail-card {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .film-poster {
+    flex: 0 0 auto;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .film-detail-text h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .genre-container {
+    padding: 1.5rem 1rem 0 1rem;
+  }
+
+  .film-detail-card {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .film-poster {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .film-detail-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .film-detail-info li {
+    font-size: 0.85rem;
+  }
+
+  .cast-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .cast-list li {
+    font-size: 0.8rem;
+  }
+
+  .film-synopsis {
+    padding: 1.5rem;
+  }
+
+  .film-synopsis h2 {
+    font-size: 1.4rem;
+  }
+
+  .film-synopsis p {
+    font-size: 0.9rem;
   }
 }

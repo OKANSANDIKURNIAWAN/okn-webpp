@@ -11,6 +11,13 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVJkEzyD6lkDNlzp6r3ztf27qi3RZtj3eUgNKLkOisRXQvok7YHBT2StwtduSQWKk8rJtfsuIeQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Film & Series</title>
     <style>
       html,
@@ -35,13 +42,13 @@
 
       .film-sidebar {
         position: sticky;
-        top: 130px;
+        top: 150px;
         height: fit-content;
         width: 280px;
         background: rgba(255, 0, 0, 0.1);
         border: 2px solid #ff0000;
-        border-radius: 16px;
-        padding: 1.5rem;
+        border-radius: 10px;
+        padding: 0.4rem;
         flex-shrink: 0;
         z-index: 100;
       }
@@ -115,9 +122,10 @@
         font-size: 2rem;
         font-weight: bold;
         color: #ffffff;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         padding-bottom: 1rem;
         border-bottom: 2px solid #ff0000;
+        padding-top: 70px;
       }
 
       .film-grid {
@@ -228,24 +236,40 @@
   </head>
   <body>
     <div class="film-page-wrapper">
-      <!-- SIDEBAR -->
-      <aside class="film-sidebar" id="filmSidebar">
-        <div class="film-sidebar-title">Film</div>
-        <nav class="film-sidebar-menu" id="filmMenu">
-          <a href="#" class="filter-btn active" data-filter="all">Film</a>
-          <a href="#" class="filter-btn" data-filter="series">Series</a>
-          <a href="#" class="filter-btn" data-filter="horor">Horor</a>
-          <a href="#" class="filter-btn" data-filter="romansa">Romansa</a>
-          <a href="#" class="filter-btn" data-filter="drama">Drama</a>
-          <a href="#" class="filter-btn" data-filter="komedi">Komedi</a>
-        </nav>
-      </aside>
+      <!-- LEFT SIDEBAR (SEARCH + SIDEBAR) -->
+      <div class="film-left-sidebar">
+        <!-- SEARCH BAR -->
+        <div class="film-search-container">
+          <form class="film-search-form" id="filmSearchForm">
+            <input
+              type="search"
+              class="film-search-input"
+              id="filmSearchInput"
+              placeholder="Cari film ..."
+            />
+            <i class="fas fa-search"></i>
+          </form>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="film-sidebar" id="filmSidebar">
+          <div class="film-sidebar-title">Pilih Genre</div>
+          <nav class="film-sidebar-menu" id="filmMenu">
+            <a href="#" class="filter-btn active" data-filter="all">Film</a>
+            <a href="#" class="filter-btn" data-filter="series">Series</a>
+            <a href="#" class="filter-btn" data-filter="horor">Horor</a>
+            <a href="#" class="filter-btn" data-filter="romansa">Romansa</a>
+            <a href="#" class="filter-btn" data-filter="drama">Drama</a>
+            <a href="#" class="filter-btn" data-filter="komedi">Komedi</a>
+          </nav>
+        </aside>
+      </div>
 
       <!-- MAIN CONTENT -->
       <main class="film-main">
         <!-- WHAT'S NEW SECTION -->
         <section class="film-section" id="whatsNewSection">
-          <h2 class="film-section-title">What's New</h2>
+          <h2 class="film-section-title">Hits New</h2>
           <div class="film-grid" id="whatsNewGrid">
             <div class="film-no-results">Loading films...</div>
           </div>
@@ -297,7 +321,7 @@
         grid.innerHTML = films
           .map(
             (film) => `
-          <a href="#" class="film-card" data-slug="${film.slug}">
+          <a href="film-detail.html?slug=${film.slug}" class="film-card" data-slug="${film.slug}">
             <div class="film-card-image">
               <img src="${film.poster}" alt="${film.title}" loading="lazy"/>
             </div>
@@ -345,6 +369,35 @@
         document.addEventListener("DOMContentLoaded", renderFilms);
       } else {
         renderFilms();
+      }
+
+      // Search functionality
+      const searchForm = document.getElementById("filmSearchForm");
+      const searchInput = document.getElementById("filmSearchInput");
+
+      if (searchForm && searchInput) {
+        searchForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const query = searchInput.value.trim().toLowerCase();
+          if (query) {
+            const results = filmCatalog.filter((f) =>
+              f.title.toLowerCase().includes(query),
+            );
+            if (results.length > 0) {
+              // Navigate to first result
+              window.location.href = `film-detail.html?slug=${results[0].slug}`;
+            } else {
+              alert("Film tidak ditemukan");
+            }
+          }
+        });
+
+        // Allow Enter key to submit
+        searchInput.addEventListener("keypress", (e) => {
+          if (e.key === "Enter") {
+            searchForm.dispatchEvent(new Event("submit"));
+          }
+        });
       }
     </script>
   </body>

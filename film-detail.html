@@ -11,67 +11,348 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/feather-icons"></script>
-    <title>contact</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVJkEzyD6lkDNlzp6r3ztf27qi3RZtj3eUgNKLkOisRXQvok7YHBT2StwtduSQWKk8rJtfsuIeQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Film Detail</title>
+    <style>
+      /* SEARCH BAR & SIDEBAR STYLES */
+      .film-search-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 2.8rem;
+        position: sticky;
+        top: 187px;
+        z-index: 99;
+      }
+
+      .film-search-form {
+        position: relative;
+        width: 60px;
+        height: 50px;
+        background: rgba(255, 0, 0, 0.95);
+        box-sizing: border-box;
+        border-radius: 30px;
+        border: 3px solid rgb(255, 0, 0);
+        padding: 10px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .film-search-form:hover {
+        width: 320px;
+        background: rgba(255, 255, 255, 0.98);
+        border-color: #ff0000;
+        box-shadow: 0 8px 24px rgba(255, 0, 0, 0.2);
+      }
+
+      .film-search-input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: none;
+        display: none;
+        font-size: 1rem;
+        border-radius: 25px;
+        padding: 0 20px;
+        background: transparent;
+        color: #111111;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .film-search-input::placeholder {
+        color: rgba(17, 17, 17, 0.6);
+      }
+
+      .film-search-form:hover .film-search-input {
+        display: block;
+      }
+
+      .film-search-form .fa-search {
+        box-sizing: border-box;
+        padding: 9px;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        border-radius: 50%;
+        color: #ff0000;
+        text-align: center;
+        font-size: 1.1em;
+        transition: all 0.4s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .film-search-form:hover .fa-search {
+        background: #ff0000;
+        color: white;
+      }
+
+      .film-sidebar {
+        position: sticky;
+        top: 250px;
+        height: fit-content;
+        width: 100%;
+        background: rgba(255, 0, 0, 0.1);
+        border: 2px solid #ff0000;
+        border-radius: 10px;
+        padding: 0.4rem;
+        flex-shrink: 0;
+        z-index: 100;
+      }
+
+      .film-sidebar-title {
+        font-family: "Kalnia", serif;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .film-sidebar-title::after {
+        content: "▼";
+        font-size: 0.8rem;
+        color: #ff0000;
+        transition: transform 0.3s ease;
+      }
+
+      .film-sidebar-title.collapsed::after {
+        transform: rotate(-90deg);
+      }
+
+      .film-sidebar-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        max-height: 500px;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .film-sidebar-menu.collapsed {
+        max-height: 0;
+      }
+
+      .film-sidebar-menu a {
+        color: #ffffff;
+        padding: 0.75rem 1rem;
+        border-left: 3px solid transparent;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .film-sidebar-menu a:hover,
+      .film-sidebar-menu a.active {
+        color: #ff0000;
+        border-left-color: #ff0000;
+        background: rgba(255, 0, 0, 0.1);
+      }
+    </style>
   </head>
   <body>
-    <div class="genre-container">
-      <div class="genre-dropdown">
-        <div class="genre-label">GENRE</div>
-        <button class="genre-btn" id="genreBtn">
-          <span class="genre-underline">Pilih Genre</span>
-          <span class="genre-arrow">&#9660;</span>
-        </button>
-        <div class="genre-menu" id="genreMenu">
-          <a href="film.html">Film</a>
-          <a href="genre.html?genre=series">Series</a>
-          <a href="genre.html?genre=horor">Horor</a>
-          <a href="genre.html?genre=romansa">Romansa</a>
-          <a href="genre.html?genre=drama">Drama</a>
-          <a href="genre.html?genre=komedi">Komedi</a>
+    <div class="film-page-wrapper">
+      <!-- LEFT SIDEBAR (SEARCH + SIDEBAR) -->
+      <div class="film-left-sidebar">
+        <!-- SEARCH BAR -->
+        <div class="film-search-container">
+          <form class="film-search-form" id="filmSearchForm">
+            <input
+              type="search"
+              class="film-search-input"
+              id="filmSearchInput"
+              placeholder="Cari film ..."
+            />
+            <i class="fas fa-search"></i>
+          </form>
         </div>
-      </div>
-    </div>
 
-    <main class="main-content">
-      <section class="film-detail">
-        <div class="film-detail-card" id="detailCard">
-          <figure class="film-poster">
-            <img id="detailPoster" src="" alt="" loading="lazy" />
-          </figure>
-          <div class="film-detail-text">
-            <h1 id="detailTitle"></h1>
-            <ol class="film-detail-info" id="detailInfo"></ol>
-            <div class="cast-section">
-              <h3>Pemeran Utama</h3>
-              <ol class="cast-list" id="detailCast"></ol>
+        <!-- SIDEBAR -->
+        <aside class="film-sidebar" id="filmSidebar">
+          <div class="film-sidebar-title">Pilih Genre</div>
+          <nav class="film-sidebar-menu" id="filmMenu">
+            <a href="film.html" class="filter-btn">Film</a>
+            <a href="genre.html?genre=series" class="filter-btn">Series</a>
+            <a href="#" class="filter-btn" data-filter="horor">Horor</a>
+            <a href="#" class="filter-btn" data-filter="romansa">Romansa</a>
+            <a href="#" class="filter-btn" data-filter="drama">Drama</a>
+            <a href="#" class="filter-btn" data-filter="komedi">Komedi</a>
+          </nav>
+        </aside>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <main class="film-main main-content">
+        <section class="film-detail">
+          <div class="film-detail-card" id="detailCard">
+            <figure class="film-poster">
+              <img id="detailPoster" src="" alt="" loading="lazy" />
+            </figure>
+            <div class="film-detail-text">
+              <h1 id="detailTitle"></h1>
+              <ol class="film-detail-info" id="detailInfo"></ol>
+              <div class="cast-section">
+                <h3>Pemeran Utama</h3>
+                <ol class="cast-list" id="detailCast"></ol>
+              </div>
             </div>
           </div>
+        </section>
+
+        <section class="film-synopsis" id="detailSynopsisSection">
+          <h2>Sinopsis</h2>
+          <p id="detailSynopsis"></p>
+        </section>
+
+        <div
+          class="film-detail-unavailable"
+          id="detailFallback"
+          hidden
+          style="text-align: center; margin: 3rem 0"
+        >
+          <h2>Film Tidak Ditemukan</h2>
+          <p>
+            Kembali ke <a href="film.html">daftar film</a> untuk memilih
+            tayangan lain.
+          </p>
         </div>
-      </section>
+      </main>
+    </div>
 
-      <section class="film-synopsis" id="detailSynopsisSection">
-        <h2>Sinopsis</h2>
-        <p id="detailSynopsis"></p>
-      </section>
-
-      <div
-        class="film-detail-unavailable"
-        id="detailFallback"
-        hidden
-        style="text-align: center; margin: 3rem 0"
-      >
-        <h2>Film Tidak Ditemukan</h2>
-        <p>
-          Kembali ke <a href="film.html">daftar film</a> untuk memilih tayangan
-          lain.
-        </p>
-      </div>
-    </main>
     <script src="js/layout.js"></script>
     <script src="js/general.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/data-film.js"></script>
     <script src="js/detail-film.js"></script>
     <script src="js/footer.js"></script>
+    <script>
+      function getUrlParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      function displayFilmDetail() {
+        const slug = getUrlParam("slug");
+        const film = filmCatalog.find((f) => f.slug === slug);
+
+        if (!film) {
+          document.getElementById("detailCard").hidden = true;
+          document.getElementById("detailSynopsisSection").hidden = true;
+          document.getElementById("detailFallback").hidden = false;
+          return;
+        }
+
+        // Set title
+        document.getElementById("detailTitle").textContent = film.title;
+
+        // Set poster
+        document.getElementById("detailPoster").src = film.poster;
+        document.getElementById("detailPoster").alt = film.title;
+
+        // Set info
+        const infoList = document.getElementById("detailInfo");
+        infoList.innerHTML = film.info
+          .map(
+            (item) => `<li><strong>${item.label}:</strong> ${item.value}</li>`,
+          )
+          .join("");
+
+        // Set cast
+        const castList = document.getElementById("detailCast");
+        castList.innerHTML = film.cast
+          .map((actor) => `<li>${actor}</li>`)
+          .join("");
+
+        // Set synopsis
+        document.getElementById("detailSynopsis").textContent = film.synopsis;
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", displayFilmDetail);
+      } else {
+        displayFilmDetail();
+      }
+
+      // Sidebar toggle collapse/expand
+      const sidebarTitle = document.querySelector(".film-sidebar-title");
+      const sidebarMenu = document.querySelector(".film-sidebar-menu");
+
+      if (sidebarTitle && sidebarMenu) {
+        // Start collapsed
+        sidebarTitle.classList.add("collapsed");
+        sidebarMenu.classList.add("collapsed");
+
+        sidebarTitle.addEventListener("click", () => {
+          sidebarTitle.classList.toggle("collapsed");
+          sidebarMenu.classList.toggle("collapsed");
+        });
+      }
+
+      // Sidebar filter buttons
+      document
+        .querySelectorAll(".film-sidebar-menu .filter-btn")
+        .forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            const dataFilter = btn.dataset.filter;
+
+            // If it's a data-filter button (genre filters), navigate to film.html with filter
+            if (dataFilter) {
+              e.preventDefault();
+              window.location.href = `film.html?filter=${dataFilter}`;
+            }
+            // Otherwise, let the default link behavior work (for Film and Series)
+          });
+        });
+
+      // Search functionality
+      const searchForm = document.getElementById("filmSearchForm");
+      const searchInput = document.getElementById("filmSearchInput");
+
+      if (searchForm && searchInput) {
+        searchForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const query = searchInput.value.trim().toLowerCase();
+          if (query) {
+            const results = filmCatalog.filter((f) =>
+              f.title.toLowerCase().includes(query),
+            );
+            if (results.length > 0) {
+              // Navigate to first result
+              window.location.href = `film-detail.html?slug=${results[0].slug}`;
+            } else {
+              alert("Film tidak ditemukan");
+            }
+          }
+        });
+
+        // Allow Enter key to submit
+        searchInput.addEventListener("keypress", (e) => {
+          if (e.key === "Enter") {
+            searchForm.dispatchEvent(new Event("submit"));
+          }
+        });
+      }
+    </script>
   </body>
 </html>

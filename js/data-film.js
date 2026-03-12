@@ -1209,8 +1209,7 @@ const filmCatalog = [
   {
     slug: "the-big-4-2",
     title: "The Big 4 2",
-    poster:
-      "img/genre series/THE BIG 4 merupakan film besutan Timo Tjahjanto yang  tayang di Netflix pada 15 Desember 2022. F.jpg",
+    poster: "img/genre/41.jpg",
     section: "upcoming",
     genres: ["Action", "Komedi", "Crime", "Series"],
     info: [
@@ -1226,7 +1225,7 @@ const filmCatalog = [
   {
     slug: "roh-halu",
     title: "Roh Halu",
-    poster: "img/genre series/ROh halu.jpg",
+    poster: "img/genre/42.jpg",
     section: "upcoming",
     genres: ["Horor", "Komedi", "Psychological Thriller", "Series"],
     info: [
@@ -1242,7 +1241,7 @@ const filmCatalog = [
   {
     slug: "bercinta-dengan-maut",
     title: "Bercinta dengan Maut",
-    poster: "img/genre series/bercinta dengan maut.jpg",
+    poster: "img/genre/43.jpg",
     section: "upcoming",
     genres: ["Horor", "Thriller", "Drama", "Series"],
     info: [
@@ -1258,7 +1257,7 @@ const filmCatalog = [
   {
     slug: "tiba-tiba-brondong",
     title: "Tiba-Tiba Brondong",
-    poster: "img/genre series/tiba tiba brondong.jpg",
+    poster: "img/genre/44.jpg",
     section: "upcoming",
     genres: ["Romansa", "Komedi", "Series"],
     info: [
@@ -1283,7 +1282,7 @@ const filmCatalog = [
   {
     slug: "bad-guys-2",
     title: "Bad Guys 2",
-    poster: "img/genre series/bad guys 2.jpg",
+    poster: "img/genre/45.jpg",
     section: "upcoming",
     genres: ["Action", "Crime", "Thriller", "Series"],
     info: [
@@ -1305,7 +1304,7 @@ const filmCatalog = [
   {
     slug: "jagal-begal",
     title: "Jagal Begal",
-    poster: "img/genre series/jagal begall'.jpg",
+    poster: "img/genre/46.jpg",
     section: "upcoming",
     genres: ["Action", "Crime", "Drama", "Series"],
     info: [
@@ -1321,7 +1320,7 @@ const filmCatalog = [
   {
     slug: "ganteng-ganteng-genteng",
     title: "Ganteng Ganteng Genteng",
-    poster: "img/genre series/ganteng ganteng genteng.jpg",
+    poster: "img/genre/47.jpg",
     section: "upcoming",
     genres: ["Drama", "Komedi", "Romansa", "Series"],
     info: [
@@ -1347,7 +1346,7 @@ const filmCatalog = [
   {
     slug: "rangga-dan-cinta",
     title: "Rangga & Cinta",
-    poster: "img/genre romansa/Rangga_&_Cinta.jpeg",
+    poster: "img/genre/48.jpeg",
     section: "hits",
     genres: ["Romansa", "Drama"],
     info: [
@@ -1378,7 +1377,7 @@ const filmCatalog = [
   {
     slug: "1-imam-2-makmum",
     title: "1 Imam 2 Makmum",
-    poster: "img/genre romansa/1 imam 2 makmum.jpg",
+    poster: "img/genre/49.jpg",
     section: "hits",
     genres: ["Romansa", "Drama", "Religi"],
     info: [
@@ -1407,7 +1406,7 @@ const filmCatalog = [
   {
     slug: "tak-kenal-maka-taaruf",
     title: "Tak Kenal Maka Taaruf",
-    poster: "img/genre romansa/tak kenal maka taaruf.jpg",
+    poster: "img/genre/50.jpg",
     section: "hits",
     genres: ["Romansa", "Religi", "Film"],
     info: [
@@ -1436,7 +1435,7 @@ const filmCatalog = [
   {
     slug: "sampai-jumpa-selamat-tinggal",
     title: "Sampai Jumpa, Selamat Tinggal",
-    poster: "img/genre romansa/sampai jumpa selamat tinggal.jpg",
+    poster: "img/genre/51.jpg",
     section: "hits",
     genres: ["Romansa", "Drama"],
     info: [
@@ -1465,7 +1464,7 @@ const filmCatalog = [
   {
     slug: "a-business-proposal",
     title: "A Business Proposal",
-    poster: "img/genre romansa/a business proposal.jpg",
+    poster: "img/genre/52.jpg",
     section: "hits",
     genres: ["Romansa", "Komedi"],
     info: [
@@ -1493,7 +1492,7 @@ const filmCatalog = [
   {
     slug: "la-tahzan",
     title: "La Tahzan",
-    poster: "img/genre romansa/la tahzan.jpg",
+    poster: "img/genre/53.jpg",
     section: "hits",
     genres: ["Romansa", "Drama", "Religi"],
     info: [
@@ -1522,7 +1521,7 @@ const filmCatalog = [
   {
     slug: "setetes-embun-cinta-niyala",
     title: "Setetes Embun Cinta Niyala",
-    poster: "img/genre romansa/setetes embun niyala.jpg",
+    poster: "img/genre/54.jpg",
     section: "hits",
     genres: ["Romansa", "Drama"],
     info: [
@@ -1551,7 +1550,7 @@ const filmCatalog = [
   {
     slug: "gowok-kamasutra-jawa",
     title: "Gowok: Kamasutra Jawa",
-    poster: "img/genre romansa/gowok.jpg",
+    poster: "img/genre/55.jpg",
     section: "hits",
     genres: ["Romansa", "Drama", "Budaya", "Film"],
     info: [
@@ -1580,7 +1579,7 @@ const filmCatalog = [
   {
     slug: "sore-istri-dari-masa-depan",
     title: "Sore: Istri dari Masa Depan",
-    poster: "img/genre romansa/sore.jpg",
+    poster: "img/genre/56.jpg",
     section: "hits",
     genres: ["Romansa", "Drama", "Fantasi"],
     info: [
@@ -1609,7 +1608,7 @@ const filmCatalog = [
   {
     slug: "norma-antara-mertua-dan-menantu",
     title: "Norma: Antara Mertua dan Menantu",
-    poster: "img/genre romansa/norma.webp",
+    poster: "img/genre/57.webp",
     section: "hits",
     genres: ["Romansa", "Drama", "Film"],
     info: [
@@ -1638,7 +1637,7 @@ const filmCatalog = [
   {
     slug: "pangku",
     title: "Pangku",
-    poster: "img/genre romansa/pangku.jpg",
+    poster: "img/genre/58.jpg",
     section: "hits",
     genres: ["Romansa", "Drama"],
     info: [
@@ -1667,7 +1666,7 @@ const filmCatalog = [
   {
     slug: "lyora",
     title: "Lyora",
-    poster: "img/genre romansa/lyora.jpeg",
+    poster: "img/genre/59.jpeg",
     section: "hits",
     genres: ["Romansa", "Drama"],
     info: [
@@ -1694,7 +1693,7 @@ const filmCatalog = [
   {
     slug: "ahlan-singapore",
     title: "Ahlan Singapore",
-    poster: "img/genre romansa/ahlan singapore.jpeg",
+    poster: "img/genre/60.jpeg",
     section: "upcoming",
     genres: ["Romansa", "Drama"],
     info: [
@@ -1712,7 +1711,7 @@ const filmCatalog = [
   {
     slug: "sadali",
     title: "Sadali",
-    poster: "img/genre romansa/sadali.jpeg",
+    poster: "img/genre/61.jpeg",
     section: "upcoming",
     genres: ["Romansa", "Drama"],
     info: [
@@ -1730,7 +1729,7 @@ const filmCatalog = [
   {
     slug: "balas-budi",
     title: "Balas Budi",
-    poster: "img/genre romansa/balas budi.jpeg",
+    poster: "img/genre/62.jpeg",
     section: "upcoming",
     genres: ["Komedi", "Romansa"],
     info: [
@@ -1748,7 +1747,7 @@ const filmCatalog = [
   {
     slug: "antara-mama-cinta-dan-surga",
     title: "Antara Mama, Cinta, dan Surga",
-    poster: "img/genre romansa/antara mama cinta dan surga.jpeg",
+    poster: "img/genre/63.jpeg",
     section: "upcoming",
     genres: ["Romansa", "Drama"],
     info: [
@@ -1766,7 +1765,7 @@ const filmCatalog = [
   {
     slug: "rumah-tanpa-cahaya-2026",
     title: "Rumah Tanpa Cahaya",
-    poster: "img/genre aksi/rumah tanpa cahaya.jpg",
+    poster: "img/genre/64.jpg",
     section: "upcoming",
     genres: ["Drama", "Family"],
     info: [
@@ -1789,7 +1788,7 @@ const filmCatalog = [
   {
     slug: "children-of-heaven-2026",
     title: "Children of Heaven",
-    poster: "img/genre aksi/children-of-heaven-cnp.jpg",
+    poster: "img/genre/65.jpg",
     section: "upcoming",
     genres: ["Drama"],
     info: [
@@ -1816,7 +1815,7 @@ const filmCatalog = [
     slug: "the-sea-speaks-his-name-2026",
     title: "The Sea Speaks His Name",
     original_title: "Laut Bercerita",
-    poster: "img/genre aksi/LAUT.webp",
+    poster: "img/genre/66.webp",
     section: "upcoming",
     genres: ["Drama", "Historical", "Political", "Film"],
     info: [
@@ -1841,8 +1840,7 @@ const filmCatalog = [
   {
     slug: "titip-bunda-di-surga-mu-2026",
     title: "Titip Bunda di Surga-Mu",
-    poster:
-      "img/genre aksi/Final Poster Titip Bunda di Surga-MuSejauh apa pun kita melangkah, harumnya masakan Ibu adalah a.jpg",
+    poster: "img/genre/67.jpg",
     section: "upcoming",
     genres: ["Drama", "Family"],
     info: [
@@ -1867,8 +1865,7 @@ const filmCatalog = [
   {
     slug: "agak-laen-menyala-pantiku",
     title: "Agak Laen: Menyala Pantiku!",
-    poster:
-      "img/genre komedi/AGAK LAEN- MENYALA PANTIKU - OFFICIAL POSTER ✨Bukan sekuel, bukan prekuel. Agak Laen- Menyala Pa.jpg",
+    poster: "img/genre/68.jpg",
     section: "hits",
     genres: ["Komedi", "Aksi", "Absurd"],
     info: [
@@ -1899,7 +1896,7 @@ const filmCatalog = [
   {
     slug: "lupa-daratan",
     title: "Lupa Daratan",
-    poster: "img/genre komedi/lupa daratan.jpg",
+    poster: "img/genre/69.jpg",
     section: "hits",
     genres: ["Komedi", "Drama"],
     info: [
@@ -1928,7 +1925,7 @@ const filmCatalog = [
   {
     slug: "kang-solah-nenek-gayung",
     title: "Kang Solah from Kang Mak x Nenek Gayung",
-    poster: "img/genre komedi/kang solah from kang mak x nenek gayung.jpg",
+    poster: "img/genre/70.jpg",
     section: "hits",
     genres: ["Komedi", "Fantasi"],
     info: [
@@ -1951,7 +1948,7 @@ const filmCatalog = [
   {
     slug: "gjls-ibuku-ibu-ibu",
     title: "GJLS: Ibuku Ibu-Ibu",
-    poster: "img/genre komedi/gjls ibuku ibu ibu.jpg",
+    poster: "img/genre/71.jpg",
     section: "hits",
     genres: ["Komedi", "Drama"],
     info: [
@@ -1975,7 +1972,7 @@ const filmCatalog = [
   {
     slug: "cocote-tonggo",
     title: "Cocote Tonggo",
-    poster: "img/genre komedi/cocote tonggo.jpg",
+    poster: "img/genre/72.jpg",
     section: "hits",
     genres: ["Komedi", "Drama", "Film"],
     info: [
@@ -1999,7 +1996,7 @@ const filmCatalog = [
   {
     slug: "jodoh-3-bujang",
     title: "Jodoh 3 Bujang",
-    poster: "img/genre komedi/jodoh 3 bujang.jpg",
+    poster: "img/genre/73.jpg",
     section: "hits",
     genres: ["Komedi", "Romansa"],
     info: [
@@ -2023,7 +2020,7 @@ const filmCatalog = [
   {
     slug: "tinggal-meninggal",
     title: "Tinggal Meninggal",
-    poster: "img/genre romansa/tiinggal mmeninggal.webp",
+    poster: "img/genre/74.webp",
     section: "hits",
     genres: ["Komedi"],
     info: [
@@ -2045,7 +2042,7 @@ const filmCatalog = [
   {
     slug: "ambyar-mak-byar",
     title: "Ambyar Mak Byar",
-    poster: "img/genre komedi/ambyar mak byar.jpg",
+    poster: "img/genre/75.jpg",
     section: "hits",
     genres: ["Komedi", "Musikal", "Film"],
     info: [
@@ -2067,7 +2064,7 @@ const filmCatalog = [
   {
     slug: "yakin-nikah",
     title: "Yakin Nikah",
-    poster: "img/genre komedi/yakin nikah.jpg",
+    poster: "img/genre/76.jpg",
     section: "hits",
     genres: ["Komedi", "Romansa"],
     info: [
@@ -2089,7 +2086,7 @@ const filmCatalog = [
   {
     slug: "dopamin",
     title: "Dopamin",
-    poster: "img/genre komedi/dopamin.jpg",
+    poster: "img/genre/77.jpg",
     section: "hits",
     genres: ["Komedi", "Romansa"],
     info: [
@@ -2111,7 +2108,7 @@ const filmCatalog = [
   {
     slug: "angel-pol",
     title: "Angel Pol",
-    poster: "img/genre komedi/angel pol.jpg",
+    poster: "img/genre/78.jpg",
     section: "hits",
     genres: ["Komedi", "Drama", "Musikal"],
     info: [
@@ -2142,7 +2139,7 @@ const filmCatalog = [
   {
     slug: "para-perasuk-2026",
     title: "Para Perasuk",
-    poster: "img/genre aksi/para perasuk.webp",
+    poster: "img/genre/79.webp",
     section: "hits",
     genres: ["Horor", "Action", "Adventure", "Drama", "Supernatural"],
     info: [
@@ -2177,7 +2174,7 @@ const filmCatalog = [
   {
     slug: "suka-duka-tawa",
     title: "Suka Duka Tawa",
-    poster: "img/genre komedi/suka duka tawa.jpg",
+    poster: "img/genre/80.jpg",
     section: "upcoming",
     genres: ["Drama", "Komedi"],
     info: [
@@ -2203,7 +2200,7 @@ const filmCatalog = [
   {
     slug: "check-out-sekarang-pay-later",
     title: "Check Out Sekarang, Pay Later",
-    poster: "img/genre komedi/check out sekarang pay later.jpeg",
+    poster: "img/genre/81.jpeg",
     section: "upcoming",
     genres: ["Drama", "Komedi", "Romansa"],
     info: [
@@ -2229,7 +2226,7 @@ const filmCatalog = [
   {
     slug: "tunggu-aku-sukses-nanti-2026",
     title: "Tunggu Aku Sukses Nanti",
-    poster: "img/genre komedi/tunggu aku sukses nanti.webp",
+    poster: "img/genre/82.webp",
     section: "upcoming",
     genres: ["Drama", "Romansa"],
     info: [
@@ -2250,7 +2247,7 @@ const filmCatalog = [
   {
     slug: "jangan-seperti-bapak",
     title: "Jangan Seperti Bapak",
-    poster: "img/genre komedi/jangan seperti bapak.jpg",
+    poster: "img/genre/83.jpg",
     section: "upcoming",
     genres: ["Drama", "Komedi"],
     info: [
@@ -2276,7 +2273,7 @@ const filmCatalog = [
   {
     slug: "aiu-eo-macam-betool-aja",
     title: "AIU-EO Macam Betool Aja!",
-    poster: "img/genre komedi/AIU - EO MACAM BETOOL AJA.jpg",
+    poster: "img/genre/84.jpg",
     section: "upcoming",
     genres: ["Komedi", "Drama"],
     info: [
@@ -2302,7 +2299,7 @@ const filmCatalog = [
   {
     slug: "senin-harga-naik",
     title: "Senin Harga Naik",
-    poster: "img/genre komedi/senin harga naik.jpg",
+    poster: "img/genre/85.jpg",
     section: "upcoming",
     genres: ["Drama", "Komedi"],
     info: [
@@ -2327,7 +2324,7 @@ const filmCatalog = [
   {
     slug: "warkop-dki-reborn-5-2026",
     title: "Warkop DKI Reborn 5",
-    poster: "img/genre komedi/warkopdki.webp",
+    poster: "img/genre/86.webp",
     section: "upcoming",
     genres: ["Komedi"],
     info: [
@@ -2349,7 +2346,7 @@ const filmCatalog = [
   {
     slug: "pelangi-di-mars",
     title: "Pelangi di Mars",
-    poster: "img/genre aksi/pelangi dimars.webp",
+    poster: "img/genre/87.webp",
     section: "upcoming",
     genres: ["Science Fiction", "Family", "Drama"],
     info: [
@@ -2380,7 +2377,7 @@ const filmCatalog = [
   {
     slug: "tukar-takdir",
     title: "Tukar Takdir",
-    poster: "img/genre aksi/tukar takdir.webp",
+    poster: "img/genre/88.webp",
     section: "hits",
     genres: ["Drama"],
     info: [
@@ -2409,7 +2406,7 @@ const filmCatalog = [
   {
     slug: "komang-2025",
     title: "Komang",
-    poster: "img/genre romansa/komang.jpg",
+    poster: "img/genre/89.jpg",
     section: "hits",
     genres: ["Drama", "Romansa"],
     info: [
@@ -2436,7 +2433,7 @@ const filmCatalog = [
   {
     slug: "comic-8-revolution-santet-kabinet",
     title: "Comic 8: Revolution: Santet Kabinet",
-    poster: "img/genre aksi/Comic 8 Revolution Santen K4binet.png",
+    poster: "img/genre/90.png",
     section: "upcoming",
     genres: ["Action", "Komedi"],
     info: [
@@ -2457,6 +2454,18 @@ const filmCatalog = [
     synopsis:
       "Sekelompok karakter eksentrik kembali terseret dalam kekacauan berskala nasional ketika muncul ancaman misterius yang mengguncang struktur kekuasaan. Di tengah intrik, humor absurd, dan aksi konyol, mereka harus mengungkap dalang di balik kekacauan tersebut sebelum situasi semakin tak terkendali.",
   },
+
+  // 91. BUKAN JODOH BIASA
+  // 92. THE MOST BEAUTIFULL GIRL IN THE WORLD
+  // 93. OPERASI PESTA PORA
+  // 94. PERANG KOTA
+  // 95 DOTI
+  // 96 EVA PENDAKIAN TERAKHIR
+  // 97 MALAM PENCABUT NYAWA
+  // 98 PEMBANTAIAN DUKUN SANTET
+  // 99 BUTO IJO
+  // 100 SUKMO
+  // 101 TENUNG
 ];
 
 const genreRegistry = [

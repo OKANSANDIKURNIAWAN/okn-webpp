@@ -11,9 +11,328 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/feather-icons"></script>
-    <title>aboutus</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Tentang VINMOEC</title>
+    <style>
+      .aboutus-hero {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: transparent
+
+        /* ?\linear-gradient( */
+          135deg,
+          rgba(9, 9, 9, 0.8) 20%,
+          rgba(150, 0, 4, 0.8) 95%
+        );
+      }
+
+      .aboutus-hero h1 {
+        font-family: "Kalnia", serif;
+        font-size: 3rem;
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+      }
+
+      .aboutus-hero p {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+
+      .aboutus-container {
+        padding: 3rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .aboutus-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+      }
+
+      .aboutus-card {
+        background: rgba(30, 30, 30, 0.6);
+        border: 1px solid rgba(255, 0, 0, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        backdrop-filter: blur(4px);
+        transition: all 0.3s ease;
+      }
+
+      .aboutus-card:hover {
+        border-color: rgba(255, 0, 0, 0.4);
+        box-shadow: 0 8px 24px rgba(255, 0, 0, 0.1);
+      }
+
+      .aboutus-card-icon {
+        width: 80px;
+        height: 80px;
+        background: #ff0000;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        color: #ffffff;
+        margin: 0 auto 1.5rem;
+      }
+
+      .aboutus-card h2 {
+        font-family: "Kalnia", serif;
+        font-size: 1.5rem;
+        color: #ffffff;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .aboutus-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .aboutus-card li {
+        font-family: "Roboto", sans-serif;
+        font-size: 0.95rem;
+        color: #d0d0d0;
+        padding-left: 1.5rem;
+        position: relative;
+        line-height: 1.6;
+      }
+
+      .aboutus-card li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #ff0000;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .aboutus-section {
+        background: transparent;
+        border-left: none;
+        padding: 0;
+        border-radius: 0;
+        margin-bottom: 4rem;
+      }
+
+      .aboutus-section h3 {
+        font-family: "Kalnia", serif;
+        font-size: 2rem;
+        color: #ffffff;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .aboutus-section-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+      }
+
+      .aboutus-section-card {
+        background: rgba(30, 30, 30, 0.7);
+        border: 1px solid rgba(255, 0, 0, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        backdrop-filter: blur(4px);
+        transition: all 0.3s ease;
+      }
+
+      .aboutus-section-card:hover {
+        border-color: rgba(255, 0, 0, 0.4);
+        box-shadow: 0 8px 24px rgba(255, 0, 0, 0.1);
+      }
+
+      .aboutus-section-card h4 {
+        font-family: "Kalnia", serif;
+        font-size: 1.3rem;
+        color: #ff0000;
+        margin: 0 0 1rem 0;
+        font-weight: bold;
+      }
+
+      .aboutus-section-card p {
+        font-family: "Roboto", sans-serif;
+        font-size: 0.95rem;
+        color: #d0d0d0;
+        line-height: 1.8;
+        margin: 0;
+      }
+
+      @media (max-width: 768px) {
+        .aboutus-hero h1 {
+          font-size: 2rem;
+        }
+
+        .aboutus-hero p {
+          font-size: 1rem;
+        }
+
+        .aboutus-container {
+          padding: 2rem 1rem;
+        }
+
+        .aboutus-grid {
+          gap: 1.5rem;
+        }
+
+        .aboutus-card {
+          padding: 1.5rem;
+        }
+
+        .aboutus-card-icon {
+          width: 70px;
+          height: 70px;
+          font-size: 2rem;
+        }
+
+        .aboutus-card h2 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
   </head>
   <body>
+    <!-- HERO SECTION -->
+    <div class="aboutus-hero">
+      <h1>Tentang VINMOEC</h1>
+      <p>
+        Platform informasi terpercaya untuk film dan series Indonesia yang
+        menghadirkan data lengkap, akurat, dan mudah diakses
+      </p>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="aboutus-container">
+      <!-- 3 CARDS SECTION -->
+      <div class="aboutus-grid">
+        <!-- MISI KAMI -->
+        <div class="aboutus-card">
+          <div class="aboutus-card-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h2>Misi Kami</h2>
+          <ul>
+            <li>
+              Menyediakan informasi film dan series Indonesia secara akurat dan
+              mudah dipahami
+            </li>
+            <li>
+              Menghadirkan kurasi judul yang relevan untuk mempermudah pencarian
+              pengguna
+            </li>
+            <li>
+              Mendukung perkembangan industri film Indonesia melalui data
+              terpercaya
+            </li>
+          </ul>
+        </div>
+
+        <!-- KEUNGGULAN -->
+        <div class="aboutus-card">
+          <div class="aboutus-card-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h2>Keunggulan</h2>
+          <ul>
+            <li>Fokus khusus pada konten film dan series Indonesia</li>
+            <li>
+              Penyajian informasi terstruktur, konsisten, dan bebas dari
+              klik-bait
+            </li>
+            <li>
+              Kurasi berdasarkan sumber resmi dan kredibel dengan proses seleksi
+              ketat
+            </li>
+            <li>Konten ditinjau berkala untuk memastikan akurasi data</li>
+          </ul>
+        </div>
+
+        <!-- SOLUSI -->
+        <div class="aboutus-card">
+          <div class="aboutus-card-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h2>Solusi</h2>
+          <ul>
+            <li>
+              Membantu pengguna menemukan informasi film dengan mudah dalam satu
+              tempat
+            </li>
+            <li>
+              Menghilangkan kesulitan mencari data dari berbagai platform
+              berbeda
+            </li>
+            <li>
+              Menyajikan data resmi dan terpercaya untuk keputusan menonton yang
+              lebih baik
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ADDITIONAL SECTIONS -->
+      <div class="aboutus-section">
+        <h3>Mengapa VINMOEC Penting</h3>
+        <div class="aboutus-section-grid">
+          <div class="aboutus-section-card">
+            <h4>Perkembangan Industri</h4>
+            <p>
+              Industri film Indonesia terus berkembang dengan rilisan baru
+              setiap tahunnya, namun informasi masih tersebar di berbagai
+              platform yang membuat pengguna kesulitan mencari data terpusat.
+            </p>
+          </div>
+          <div class="aboutus-section-card">
+            <h4>Solusi Terpadu</h4>
+            <p>
+              VINMOEC hadir untuk mengumpulkan semua data film dan series
+              Indonesia dalam satu katalog lengkap, memberikan pengguna gambaran
+              menyeluruh tentang hiburan lokal dengan cepat dan jelas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="aboutus-section">
+        <h3>Mengapa Anda Dapat Mempercayai Kami</h3>
+        <div class="aboutus-section-grid">
+          <div class="aboutus-section-card">
+            <h4>Sumber Resmi & Kredibel</h4>
+            <p>
+              Setiap informasi bersumber dari data resmi, pengumuman produksi,
+              dan kanal distribusi kredibel—bukan opini atau spekulasi yang
+              tidak terverifikasi.
+            </p>
+          </div>
+          <div class="aboutus-section-card">
+            <h4>Standar Konsistensi Ketat</h4>
+            <p>
+              Kami menerapkan proses pemilihan yang mengikuti standar
+              konsistensi dalam setiap kurasi, memastikan pengguna mendapatkan
+              informasi yang valid, akurat, dan dapat diandalkan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="js/layout.js"></script>
     <script src="js/general.js"></script>
     <script src="js/footer.js"></script>
