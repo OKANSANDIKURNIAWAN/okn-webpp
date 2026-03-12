@@ -2456,16 +2456,257 @@ const filmCatalog = [
   },
 
   // 91. BUKAN JODOH BIASA
-  // 92. THE MOST BEAUTIFULL GIRL IN THE WORLD
+  {
+    slug: "bukan-jodoh-biasa",
+    title: "Bukan Jodoh Biasa",
+    poster: "img/genre/91.jpg",
+    section: "upcoming",
+    genres: ["Drama", "Romansa"],
+    info: [
+      { label: "Genre", value: "Drama, Romansa" },
+      { label: "Tahun Rilis", value: "2026" },
+      { label: "Bahasa", value: "Bahasa Indonesia" },
+    ],
+    cast: [
+      "Dicky Chandra sebagai Abah",
+      "Fico Fachriza sebagai Jonggi",
+      "Nina Kozok sebagai Marsya",
+      "Raim Laode sebagai Richard",
+      "Joe Project P. sebagai Mang Ujo",
+    ],
+    synopsis:
+      "Kisah hubungan yang terjebak antara perasaan dan takdir. Dua orang yang saling terhubung harus menghadapi kenyataan bahwa cinta tidak selalu berarti berjodoh.",
+  },
+
+  // 92. THE MOST BEAUTIFUL GIRL IN THE WORLD
+  {
+    slug: "the-most-beautiful-girl-in-the-world",
+    title: "The Most Beautiful Girl in the World",
+    poster: "img/genre/92.webp",
+    section: "upcoming",
+    genres: ["Drama", "Romansa"],
+    info: [
+      { label: "Genre", value: "Drama, Romansa" },
+      { label: "Tahun Rilis", value: "2026" },
+      { label: "Bahasa", value: "Bahasa Indonesia" },
+    ],
+    cast: [
+      "Reza Rahadian sebagai Reuben Wiraatmadja",
+      "Sheila Dara Aisha sebagai Kiara Clarissa",
+      "Kevin Julio sebagai Jimmy Setiawan",
+      "Indra Birowo sebagai Agung Santoso",
+      "Jihane Almira sebagai Helen Kusuma",
+    ],
+    synopsis:
+      "Seorang pria sukses yang terbiasa mendapatkan apa pun dalam hidupnya memulai pencarian obsesif terhadap sosok perempuan yang ia anggap paling sempurna di dunia.",
+  },
+
   // 93. OPERASI PESTA PORA
+  {
+    slug: "operasi-pesta-pora",
+    title: "Operasi Pesta Pora",
+    poster: "img/genre/93.jpg",
+    section: "upcoming",
+    genres: ["Action", "Komedi"],
+    info: [
+      { label: "Genre", value: "Action, Komedi" },
+      { label: "Tahun Rilis", value: "2026" },
+      { label: "Bahasa", value: "Bahasa Indonesia" },
+    ],
+    cast: [
+      "Iqbaal Ramadhan sebagai Ijal",
+      "Kristo Immanuel sebagai Adut",
+      "Zulfa Maharani sebagai Tia",
+      "Kawai Labiba sebagai Melodi",
+    ],
+    synopsis:
+      "Empat anak muda tanpa sengaja terlibat dalam operasi rahasia yang berujung pada kekacauan penuh aksi dan komedi.",
+  },
+
   // 94. PERANG KOTA
-  // 95 DOTI
-  // 96 EVA PENDAKIAN TERAKHIR
-  // 97 MALAM PENCABUT NYAWA
-  // 98 PEMBANTAIAN DUKUN SANTET
-  // 99 BUTO IJO
-  // 100 SUKMO
-  // 101 TENUNG
+  {
+    slug: "perang-kota",
+    title: "Perang Kota",
+    poster: "img/genre/94.jpg",
+    section: "hits",
+    genres: ["Action", "Drama"],
+    info: [
+      { label: "Genre", value: "Action, Drama" },
+      { label: "Tahun Rilis", value: "2025" },
+      { label: "Bahasa", value: "Bahasa Indonesia" },
+    ],
+    cast: [
+      "Zeke Khaseli",
+      "Yudhi Arfani",
+      "Roy Lolang",
+      "Robert Grigsby Wilson",
+      "Natalie Soh",
+      "Rama Adi",
+      "Isabelle Glachant",
+    ],
+    synopsis:
+      "Ketegangan konflik di tengah kota mempertemukan berbagai tokoh dengan kepentingan berbeda dalam situasi yang semakin memanas.",
+  },
+
+  // 95. DOTI
+  {
+    slug: "doti",
+    title: "Doti",
+    poster: "img/genre/95.jpg",
+    section: "upcoming",
+    genres: ["Horor"],
+    info: [
+      { label: "Genre", value: "Horor" },
+      { label: "Tahun Rilis", value: "2026" },
+      { label: "Bahasa", value: "Bahasa Indonesia" },
+    ],
+    cast: [
+      "Billy Boedjanger",
+      "Risma Niswaty",
+      "Ibu Ihsan",
+      "Della Ogini",
+      "Ahmad Pule",
+    ],
+    synopsis:
+      "Kisah misteri mengenai praktik ilmu hitam bernama doti yang membawa teror bagi sebuah desa.",
+  },
+
+  // 96. EVA: PENDAKIAN TERAKHIR
+  {
+    slug: "eva-pendakian-terakhir",
+    title: "Eva: Pendakian Terakhir",
+    poster: "img/genre/96.jpeg",
+    section: "upcoming",
+    genres: ["Horor", "Petualangan"],
+    info: [
+      { label: "Genre", value: "Horor, Petualangan" },
+      { label: "Tahun Rilis", value: "2026" },
+      { label: "Bahasa", value: "Bahasa Indonesia" },
+    ],
+    cast: [
+      "Bulan Sutena sebagai Eva",
+      "Kiesha Alvaro sebagai Pasha",
+      "Axel Matthew Thomas sebagai Joni",
+      "Ashira Zamita sebagai Nisa",
+      "Ilham Aji Santoso sebagai Vicky",
+    ],
+    synopsis:
+      "Pendakian yang awalnya menjadi petualangan berubah menjadi pengalaman mengerikan ketika misteri hilangnya seorang pendaki bernama Eva mulai terungkap.",
+  },
+
+  // 97. MALAM PENCABUT NYAWA
+  {
+    slug: "malam-pencabut-nyawa",
+    title: "Malam Pencabut Nyawa",
+    poster: "img/genre/97.jpg",
+    section: "upcoming",
+    genres: ["Horor", "Thriller"],
+    info: [
+      { label: "Genre", value: "Horor, Thriller" },
+      { label: "Tahun Rilis", value: "2026" },
+      { label: "Bahasa", value: "Bahasa Indonesia" },
+    ],
+    cast: [
+      "Devano Danendra sebagai Respati",
+      "Keisya Levronka sebagai Wulan",
+      "Mikha Hernan sebagai Tirta",
+      "Budi Ros sebagai Sugiman",
+      "Fajar Nugra sebagai Abdul",
+    ],
+    synopsis:
+      "Serangkaian kejadian mistis di satu malam mengancam nyawa banyak orang dan memaksa para tokohnya mengungkap misteri yang tersembunyi.",
+  },
+
+  // 98. PEMBANTAIAN DUKUN SANTET
+  {
+    slug: "pembantaian-dukun-santet",
+    title: "Pembantaian Dukun Santet",
+    poster: "img/genre/98.jpg",
+    section: "upcoming",
+    genres: ["Horor", "Thriller"],
+    info: [
+      { label: "Genre", value: "Horor, Thriller" },
+      { label: "Tahun Rilis", value: "2026" },
+      { label: "Bahasa", value: "Bahasa Indonesia" },
+    ],
+    cast: [
+      "Kevin Ardilova sebagai Satrio",
+      "Aurora Ribero sebagai Annisa",
+      "Kaneishia Yusuf sebagai Nurul",
+      "Iqbal Sulaiman sebagai Ali",
+      "Ariyo Wahab sebagai Ustadz",
+    ],
+    synopsis:
+      "Terinspirasi dari tragedi sosial ketika tuduhan santet memicu kekerasan dan kepanikan massal di sebuah daerah.",
+  },
+
+  // 100. BUTO IJO
+  {
+    slug: "buto-ijo",
+    title: "Penunggu Rumah: Buto Ijo",
+    poster: "img/genre/100.jpg",
+    section: "upcoming",
+    genres: ["Horor", "Fantasi"],
+    info: [
+      { label: "Genre", value: "Horor, Fantasi" },
+      { label: "Tahun Rilis", value: "2026" },
+      { label: "Bahasa", value: "Bahasa Indonesia" },
+    ],
+    cast: [
+      "Gandhi Fernando sebagai Ali",
+      "Celine Evangelista sebagai Srini",
+      "Valerie Thomas sebagai Lana",
+      "Meryem Hasanah sebagai Tisya",
+      "Adnan Djani sebagai Indra",
+    ],
+    synopsis:
+      "Legenda Buto Ijo kembali menghantui sebuah keluarga ketika masa lalu yang kelam mulai terungkap.",
+  },
+
+  // 101 SUKMO
+  {
+    slug: "sukmo",
+    title: "Sukmo",
+    poster: "img/genre/101.jpg",
+    section: "upcoming",
+    genres: ["Horor", "Misteri"],
+    info: [
+      { label: "Genre", value: "Horor, Misteri" },
+      { label: "Tahun Rilis", value: "2026" },
+      { label: "Bahasa", value: "Bahasa Indonesia" },
+    ],
+    cast: [
+      "Luna Maya sebagai Arini",
+      "Christine Hakim sebagai Sri",
+      "Fedi Nuril sebagai Hendra",
+      "Oka Antara",
+    ],
+    synopsis:
+      "Kisah misteri yang berkaitan dengan roh dan kesadaran manusia. Seorang perempuan mulai mengalami kejadian aneh yang membuat batas antara dunia nyata dan dunia spiritual menjadi kabur.",
+  },
+
+  // 102. TENUNG
+  {
+    slug: "tenung",
+    title: "Tenung",
+    poster: "img/genre/102.jpg",
+    section: "upcoming",
+    genres: ["Horor"],
+    info: [
+      { label: "Genre", value: "Horor" },
+      { label: "Tahun Rilis", value: "2026" },
+      { label: "Bahasa", value: "Bahasa Indonesia" },
+    ],
+    cast: [
+      "Aisyah Aqilah sebagai Andira",
+      "Emir Mahira sebagai Ari",
+      "Sonia Alyssa sebagai Ara",
+      "Seroja Hafiedz sebagai Linda",
+      "Humaira Jahra sebagai Adelia",
+    ],
+    synopsis:
+      "Kisah tentang praktik ilmu tenung yang memicu serangkaian kejadian supranatural dalam kehidupan sebuah keluarga.",
+  },
 ];
 
 const genreRegistry = [
