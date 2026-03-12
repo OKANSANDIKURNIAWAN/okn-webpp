@@ -11,9 +11,313 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/feather-icons"></script>
-    <title>contact</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Kontak VINMOEC</title>
+    <style>
+      .contact-hero {
+        text-align: left;
+        padding: 4rem 2rem;
+        background: transparent;
+      }
+
+      .contact-hero h1 {
+        font-family: "Krimson", serif;
+        font-size: 3.5rem;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+      .contact-hero p {
+        font-family: "Arimo", sans-serif;
+        font-size: 0.95rem;
+        color: #b0b0b0;
+        margin-bottom: 3rem;
+      }
+
+      .contact-container {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: -5rem;
+      }
+
+      .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .contact-form-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .contact-form-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-form-group label {
+        font-family: "Arimo", sans-serif;
+        font-size: 0.95rem;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+
+      .contact-form-group input,
+      .contact-form-group textarea {
+        font-family: "Arimo", sans-serif;
+        font-size: 0.9rem;
+        padding: 0.75rem 1.2rem;
+        border: 2px solid rgba(255, 0, 0, 0.5);
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        transition: all 0.3s ease;
+        outline: none;
+      }
+
+      .contact-form-group input::placeholder,
+      .contact-form-group textarea::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .contact-form-group input:focus,
+      .contact-form-group textarea:focus {
+        border-color: #ff0000;
+        background: rgba(255, 0, 0, 0.05);
+      }
+
+      .contact-form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+        border-radius: 15px;
+      }
+
+      .contact-submit-btn {
+        font-family: "Arimo", sans-serif;
+        font-size: 0.95rem;
+        padding: 0.75rem 2rem;
+        border: 2px solid #ff0000;
+        border-radius: 25px;
+        background: transparent;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        width: fit-content;
+        margin-top: 0.5rem;
+      }
+
+      .contact-submit-btn:hover {
+        background: #ff0000;
+        color: #ffffff;
+      }
+
+      .contact-info-section {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        margin-bottom: 100px;
+      }
+
+      .contact-info-icon {
+        width: 200px;
+        height: 200px;
+        background: #000000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .contact-info-icon img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+      }
+
+      .contact-info-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .contact-info-item {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+
+      .contact-info-item-icon {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ff0000;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+
+      .contact-info-item-content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-info-item-content p {
+        font-family: "Arimo", sans-serif;
+        font-size: 0.95rem;
+        color: #d0d0d0;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 968px) {
+        .contact-content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .contact-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .contact-info-section {
+          flex-direction: column;
+        }
+
+        .contact-info-icon {
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .contact-hero {
+          padding: 2rem 1rem;
+        }
+
+        .contact-hero h1 {
+          font-size: 2rem;
+        }
+
+        .contact-container {
+          padding: 1rem;
+        }
+
+        .contact-form-group input,
+        .contact-form-group textarea {
+          font-size: 0.85rem;
+          padding: 0.65rem 1rem;
+        }
+      }
+    </style>
   </head>
   <body>
+    <!-- HERO SECTION -->
+    <div class="contact-hero">
+      <h1>KONTAK KAMI!</h1>
+      <p>Harap isi formulir ini dengan jelas</p>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="contact-container">
+      <div class="contact-content">
+        <!-- FORM SECTION -->
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm">
+            <div class="contact-form-group">
+              <label for="nama">Nama</label>
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                placeholder="Ketik di sini..."
+                required
+              />
+            </div>
+
+            <div class="contact-form-group">
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Ketik di sini..."
+                required
+              />
+            </div>
+
+            <div class="contact-form-group">
+              <label for="pesan">Pesan Anda</label>
+              <textarea
+                id="pesan"
+                name="pesan"
+                placeholder="Ketik di sini..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit-btn">KIRIM</button>
+          </form>
+        </div>
+
+        <!-- INFO SECTION -->
+        <div class="contact-info-section">
+          <div class="contact-info-icon">
+            <img src="img/general/logo.jpeg" alt="VINMOEC LOGO" />
+          </div>
+
+          <div class="contact-info-details">
+            <div class="contact-info-item">
+              <div class="contact-info-item-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-info-item-content">
+                <p>+62 877-1333-5638</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-item-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-info-item-content">
+                <p>oksndrn@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-item-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-info-item-content">
+                <p>
+                  Jalan Simpang Lima, RT 02 RW 01, Kel Magasari, Kec. Semarang
+                  Selatan, Kota Semarang, 50249
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="js/layout.js"></script>
     <script src="js/general.js"></script>
     <script src="js/footer.js"></script>

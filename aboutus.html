@@ -24,8 +24,8 @@
       }
 
       .aboutus-hero h1 {
-        font-family: "Kalnia", serif;
-        font-size: 3rem;
+        font-family: "Krimson", serif;
+        font-size: 5rem;
         color: #ffffff;
         margin-top: 2rem;
         margin-bottom: 1.76rem;
@@ -33,7 +33,7 @@
       }
 
       .aboutus-hero p {
-        font-family: "Roboto", sans-serif;
+        font-family: "Arimo", sans-serif;
         font-size: 1.1rem;
         color: #e0e0e0;
         max-width: 800px;
@@ -45,6 +45,7 @@
         padding: 3rem 2rem;
         max-width: 1200px;
         margin: 0 auto;
+        margin-top: -50px;
       }
 
       .aboutus-grid {
@@ -64,7 +65,7 @@
       }
 
       .aboutus-card:hover {
-        border-color: rgba(255, 0, 0, 0.4);
+        border-color: rgba(255, 0, 0, 0.979);
         box-shadow: 0 8px 24px rgba(255, 0, 0, 0.1);
       }
 
@@ -82,7 +83,7 @@
       }
 
       .aboutus-card h2 {
-        font-family: "Kalnia", serif;
+        font-family: "Roboto", serif;
         font-size: 1.5rem;
         color: #ffffff;
         margin-bottom: 1rem;
@@ -100,7 +101,7 @@
       }
 
       .aboutus-card li {
-        font-family: "Roboto", sans-serif;
+        font-family: "Arimo", sans-serif;
         font-size: 0.95rem;
         color: #d0d0d0;
         padding-left: 1.5rem;
@@ -126,7 +127,7 @@
       }
 
       .aboutus-section h3 {
-        font-family: "Kalnia", serif;
+        font-family: "Krimson", serif;
         font-size: 2rem;
         color: #ffffff;
         margin-bottom: 2rem;
@@ -142,7 +143,7 @@
 
       .aboutus-section-card {
         background: rgba(30, 30, 30, 0.7);
-        border: 1px solid rgba(255, 0, 0, 0.2);
+        border: 1px solid rgb(255, 0, 0);
         border-radius: 12px;
         padding: 2rem;
         backdrop-filter: blur(4px);
@@ -155,15 +156,15 @@
       }
 
       .aboutus-section-card h4 {
-        font-family: "Kalnia", serif;
+        font-family: "Roboto", serif;
         font-size: 1.3rem;
-        color: #ff0000;
+        color: #f5f5f5;
         margin: 0 0 1rem 0;
         font-weight: bold;
       }
 
       .aboutus-section-card p {
-        font-family: "Roboto", sans-serif;
+        font-family: "Arimo", sans-serif;
         font-size: 0.95rem;
         color: #d0d0d0;
         line-height: 1.8;
@@ -199,6 +200,125 @@
 
         .aboutus-card h2 {
           font-size: 1.2rem;
+        }
+      }
+
+      /* TEAM SECTION STYLES */
+      .aboutus-team-section {
+        margin-top: 6rem;
+        padding-top: 3rem;
+        border-top: 2px solid rgba(255, 0, 0, 0.3);
+      }
+
+      .aboutus-team-section h3 {
+        font-family: "Krimson", serif;
+        font-size: 2rem;
+        color: #ffffff;
+        margin-bottom: 3rem;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .team-member-card {
+        background: rgba(30, 30, 30, 0.7);
+        border: 1px solid rgba(255, 0, 0, 0.3);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .team-member-card:hover {
+        border-color: rgba(255, 0, 0, 0.8);
+        box-shadow: 0 8px 24px rgba(255, 0, 0, 0.15);
+        transform: translateY(-5px);
+      }
+
+      .team-member-photo {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        /* object-position: center 80%; */
+        display: block;
+      }
+
+      .team-member-info {
+        padding: 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .team-member-name {
+        font-family: "Roboto", serif;
+        font-size: 1.1rem;
+        color: #ffffff;
+        margin-bottom: 0.3rem;
+        font-weight: bold;
+      }
+
+      .team-member-role {
+        font-family: "Arimo", sans-serif;
+        font-size: 0.85rem;
+        color: #ff6b6b;
+        margin-bottom: 1.2rem;
+        font-weight: 500;
+      }
+
+      .team-social-icons {
+        display: flex;
+        gap: 0.8rem;
+        justify-content: center;
+      }
+
+      .team-social-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 0, 0, 0.2);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 0, 0, 0.3);
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .team-social-icon:hover {
+        background: #ff0000;
+        border-color: #ff0000;
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 768px) {
+        .team-grid {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .team-member-photo {
+          height: 220px;
+        }
+
+        .team-member-name {
+          font-size: 1rem;
+        }
+
+        .team-social-icon {
+          width: 36px;
+          height: 36px;
+          font-size: 1rem;
         }
       }
     </style>
@@ -284,7 +404,7 @@
 
       <!-- ADDITIONAL SECTIONS -->
       <div class="aboutus-section">
-        <h3>Mengapa VINMOEC Penting</h3>
+        <h3>Mengapa VINMOEC Penting?</h3>
         <div class="aboutus-section-grid">
           <div class="aboutus-section-card">
             <h4>Perkembangan Industri</h4>
@@ -306,13 +426,13 @@
       </div>
 
       <div class="aboutus-section">
-        <h3>Mengapa Anda Dapat Mempercayai Kami</h3>
+        <h3>Mengapa Anda Dapat Mempercayai Kami?</h3>
         <div class="aboutus-section-grid">
           <div class="aboutus-section-card">
             <h4>Sumber Resmi & Kredibel</h4>
             <p>
               Setiap informasi bersumber dari data resmi, pengumuman produksi,
-              dan kanal distribusi kredibel—bukan opini atau spekulasi yang
+              dan kanal distribusi kredibel, bukan opini atau spekulasi yang
               tidak terverifikasi.
             </p>
           </div>
@@ -323,6 +443,126 @@
               konsistensi dalam setiap kurasi, memastikan pengguna mendapatkan
               informasi yang valid, akurat, dan dapat diandalkan.
             </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TIM KAMI SECTION -->
+      <div class="aboutus-section aboutus-team-section">
+        <h3>Tim Kami</h3>
+        <div class="team-grid">
+          <!-- TEAM MEMBER 1 -->
+          <div class="team-member-card">
+            <img
+              src="img/general/haidar.jpeg"
+              alt="Haidar Rafi Jaelani"
+              class="team-member-photo"
+            />
+            <div class="team-member-info">
+              <h4 class="team-member-name">Haidar Rafi Jaelani</h4>
+              <p class="team-member-role">Lead Developer</p>
+              <div class="team-social-icons">
+                <a
+                  href="https://www.instagram.com/haikrj.xo?igsh=eW55cHhydXZ0NmJs"
+                  class="team-social-icon"
+                  title="Instagram"
+                  target="blank"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.tiktok.com/@another_name29?_r=1&_t=ZS-94d0AxIs7l7"
+                  class="team-social-icon"
+                  title="TikTok"
+                  target="blank"
+                >
+                  <i class="fab fa-tiktok"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- TEAM MEMBER 2 -->
+          <div class="team-member-card">
+            <img
+              src="img/general/khalisa.jpeg"
+              alt="Khalisa Fazila Ramadhani"
+              class="team-member-photo"
+            />
+            <div class="team-member-info">
+              <h4 class="team-member-name">Khalisa Fazila Ramadhani</h4>
+              <p class="team-member-role">Product Manager</p>
+              <div class="team-social-icons">
+                <a
+                  href="https://www.instagram.com/khlisafrz?igsh=MW5ocTVnNm5iOHhjaA=="
+                  class="team-social-icon"
+                  title="Instagram"
+                  target="blank"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.tiktok.com/@khalisakhalisoo?_r=1&_t=ZS-94d3gU8rG7A"
+                  class="team-social-icon"
+                  title="TikTok"
+                  target="blank"
+                >
+                  <i class="fab fa-tiktok"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- TEAM MEMBER 3 -->
+          <div class="team-member-card">
+            <img
+              src="img/general/okan.jpeg"
+              alt="Okan Sandi Kurniawan"
+              class="team-member-photo"
+            />
+            <div class="team-member-info">
+              <h4 class="team-member-name">Okan Sandi Kurniawan</h4>
+              <p class="team-member-role">Full Stack Developer</p>
+              <div class="team-social-icons">
+                <a
+                  href="https://www.instagram.com/itskozl?igsh=MWJxdHQwYWk1eDZ4Yg=="
+                  class="team-social-icon"
+                  title="Instagram"
+                  target="blank"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.tiktok.com/@wells4a?_r=1&_t=ZS-94cyq0pDJ00"
+                  class="team-social-icon"
+                  title="TikTok"
+                  target="blank"
+                >
+                  <i class="fab fa-tiktok"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- TEAM MEMBER 4 -->
+          <div class="team-member-card">
+            <img
+              src="img/general/neela.jpeg"
+              alt="Rieva Asancaya Aneela El Daviq"
+              class="team-member-photo"
+            />
+            <div class="team-member-info">
+              <h4 class="team-member-name">Rieva Asancaya Aneela El Daviq</h4>
+              <p class="team-member-role">UI/UX Designer</p>
+              <div class="team-social-icons">
+                <a href="#" class="team-social-icon" title="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="team-social-icon" title="TikTok">
+                  <i class="fab fa-tiktok"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -53,9 +53,11 @@ function createSharedLayout() {
     '<div class="sidebar-content">' +
     '<h2 class="sidebar-title">Rilis Baru</h2>' +
     '<p class="sidebar-movie-tittle">Balas Budi</p>' +
-    '<img src="img/genre komedi/balas budi.jpeg" alt="Poster" class="sidebar-img" loading="lazy" style="margin-top: 1rem" />' +
+    '<a href="film-detail.html?slug=balas-budi" style="display: inline-block; width: 100%; text-decoration: none;">' +
+    '<img src="img/genre/62.jpeg" alt="Poster" class="sidebar-img" loading="lazy" style="margin-top: 1rem; cursor: pointer; transition: transform 0.3s ease;" />' +
+    "</a>" +
     '<p style="margin-top: 1rem">27 November 2025</p>' +
-    '<a href="genre.html?slug=balas-budi" style="color: #fff; text-decoration: underline">Lihat semua rilis</a>' +
+    '<a href="film-detail.html?slug=balas-budi" style="color: #fff; text-decoration: underline">Lihat semua rilis</a>' +
     "</div>" +
     "</aside>";
 
@@ -73,22 +75,35 @@ function createSharedLayout() {
     '<footer class="footer-section">' +
     '<div class="gooey-animations" id="particle-container"></div>' +
     '<div class="footer-content">' +
-    '<div class="footer-column">' +
-    "<h4>Company</h4>" +
-    '<a href="aboutus.html">About</a>' +
-    '<a href="#">Careers</a>' +
+    '<div class="footer-left">' +
+    "<p class='footer-title'>VINMOEC</p>" +
+    "<p class='footer-desc'>Situs informasi film & series Indonesia Tahun 2025.</p>" +
     "</div>" +
+    '<div class="footer-right">' +
+    '<div class="footer-columns">' +
     '<div class="footer-column">' +
-    "<h4>Resources</h4>" +
-    '<a href="#">Help Center</a>' +
-    '<a href="#">Privacy</a>' +
+    "<h4>MENU</h4>" +
+    '<a href="home.html">Home</a>' +
+    '<a href="film.html">Film & Series</a>' +
+    '<a href="aboutus.html">About Us</a>' +
     '<a href="contact.html">Contact</a>' +
     "</div>" +
     '<div class="footer-column">' +
-    "<h4>Social</h4>" +
-    '<a href="#">Instagram</a>' +
-    '<a href="#">Twitter</a>' +
+    "<h4>INFORMATION</h4>" +
+    '<a href="#">Privacy Policy</a>' +
+    '<a href="#">Terms & Conditions</a>' +
+    '<a href="#">Disclaimer</a>' +
     "</div>" +
+    '<div class="footer-social-icons">' +
+    '<a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>' +
+    '<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>' +
+    '<a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>' +
+    '<a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>' +
+    "</div>" +
+    "</div>" +
+    "</div>" +
+    '<div class="footer-bottom">' +
+    "<p>© 2025 CINMOEV — Created by Team 4</p>" +
     "</div>" +
     "</footer>";
 
