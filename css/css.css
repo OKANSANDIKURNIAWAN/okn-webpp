@@ -357,7 +357,7 @@ body {
   width: var(--dim, 5rem);
   height: var(--dim, 5rem);
   transform: translate(-50%, -50%);
-  animation: float-up var(--dur, 4s) ease-in infinite;
+  animation: float-up var(--dur, 6s) ease-in infinite;
   animation-delay: var(--delay, 0s);
 }
 

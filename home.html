@@ -12,6 +12,261 @@
     />
     <script src="https://unpkg.com/feather-icons"></script>
     <title>home</title>
+    <style>
+      /* Override main-container for 2-column layout */
+      .main-container {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 2rem;
+        padding: 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .trending-section {
+        width: 100%;
+      }
+
+      .trending-section h2 {
+        font-family: "Kalnia", serif;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #ffffff;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .trending-section h2::before {
+        content: "🔖";
+        font-size: 2.2rem;
+      }
+
+      .trending-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1.5rem;
+        width: 100%;
+      }
+
+      .trending-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        cursor: pointer;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+      }
+
+      .trending-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+      }
+
+      .trending-card-wrapper {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #2a2a2a;
+      }
+
+      .trending-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .trending-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .trending-badge {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: white;
+        z-index: 10;
+      }
+
+      .trending-badge.badge-1 {
+        background: #ffb300;
+      }
+
+      .trending-badge.badge-2 {
+        background: #c0c0c0;
+      }
+
+      .trending-badge.badge-3 {
+        background: #ff6b35;
+      }
+
+      .trending-card-title {
+        font-family: "Kalnia", serif;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #ffffff;
+        line-height: 1.4;
+        text-align: center;
+      }
+
+      .trending-card-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+      }
+
+      .trending-card-genre {
+        background: #ff0000;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        display: inline-block;
+      }
+
+      .trending-card-rating {
+        color: #ffb300;
+        font-size: 0.9rem;
+      }
+
+      /* Cinema Note styling */
+      .cinema-note {
+        background: rgba(30, 30, 30, 0.6);
+        padding: 1.5rem;
+        border-radius: 16px;
+        position: sticky;
+        top: 140px;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+        max-height: 550px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 0, 0, 0.2);
+      }
+
+      .cinema-note h3 {
+        font-family: "Kalnia", serif;
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #ffffff;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .cinema-note h3::before {
+        content: "»";
+        color: #ff0000;
+        font-size: 1.8rem;
+      }
+
+      .cinema-scroll {
+        max-height: 400px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-right: 0.5rem;
+      }
+
+      .cinema-scroll::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .cinema-scroll::-webkit-scrollbar-thumb {
+        background: rgba(255, 0, 0, 0.3);
+        border-radius: 999px;
+      }
+
+      .note-item {
+        padding-bottom: 1rem;
+        border-bottom: 1px dashed rgba(255, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .note-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .note-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 8px;
+        margin-bottom: 0.95rem;
+        display: block;
+      }
+
+      .note-item p {
+        font-size: 0.8rem;
+        color: #d0d0d0;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+        font-style: italic;
+      }
+
+      .actor-name {
+        display: block;
+        font-size: 0.8rem;
+        color: #ff0000;
+        margin-top: 0.5rem;
+        font-weight: 600;
+      }
+
+      @media (max-width: 1024px) {
+        .main-container {
+          grid-template-columns: 1fr;
+        }
+
+        .cinema-note {
+          position: static;
+          max-height: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .main-container {
+          padding: 1.5rem;
+        }
+
+        .trending-grid {
+          grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+          gap: 1rem;
+        }
+
+        .trending-card-title {
+          font-size: 0.85rem;
+        }
+
+        .cinema-note {
+          padding: 1rem;
+        }
+
+        .cinema-scroll {
+          max-height: none;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="page-wrapper">
@@ -75,14 +330,14 @@
 
           <div class="cinema-scroll">
             <div class="note-item">
-              <img src="img/cinema note/angga.jpg" alt="Angga Yunanda" />
+              <img src="img/aktoraktris/angga.jpg" alt="Angga Yunanda" />
               <p>”Berani mencoba lebih penting daripada takut gagal.”</p>
-              <span class="”actor-name”">— Angga Yunanda</span>
+              <span class="actor-name">— Angga Yunanda</span>
             </div>
 
             <div class="note-item">
               <img
-                src="img/cinema note/christine.jpg"
+                src="img/aktoraktris/christine.jpg"
                 alt="Christine Hakim"
                 loading="lazy"
               />
@@ -95,7 +350,7 @@
 
             <div class="note-item">
               <img
-                src="img/cinema note/rezza.jpg"
+                src="img/aktoraktris/rezza.jpg"
                 alt="Reza Rahadian"
                 loading="lazy"
               />
@@ -108,7 +363,7 @@
 
             <div class="note-item">
               <img
-                src="img/cinema note/prilly.jpg"
+                src="img/aktoraktris/prilly.jpg"
                 alt="Prilly Latuconsina"
                 loading="lazy"
               />
@@ -121,7 +376,7 @@
 
             <div class="note-item">
               <img
-                src="img/cinema note/ikow.jpg"
+                src="img/aktoraktris/ikow.jpg"
                 alt="Iko Uwais"
                 loading="lazy"
               />
@@ -129,12 +384,12 @@
                 “Disiplin kecil setiap hari, membangun hasil besar suatu saat
                 nanti.”
               </p>
-              <span class="”actor-name”">— Iko Uwais</span>
+              <span class="actor-name">— Iko Uwais</span>
             </div>
 
             <div class="note-item">
               <img
-                src="img/cinema note/jefry.jpg"
+                src="img/aktoraktris/jefry.jpg"
                 alt="Jefri Nichol"
                 loading="lazy"
               />
@@ -142,12 +397,12 @@
                 “Kesalahan bukan akhir cerita. Itu cuma bab yang bikin kita
                 tumbuh.”
               </p>
-              <span class="”actor-name”">— Jefri Nichol</span>
+              <span class="actor-name">— Jefri Nichol</span>
             </div>
 
             <div class="note-item">
               <img
-                src="img/cinema note/bryan.jpg"
+                src="img/aktoraktris/bryan.jpg"
                 alt="Bryan Domani"
                 loading="lazy"
               />
@@ -155,12 +410,12 @@
                 “Kita tumbuh dari pilihan yang kita ambil, bukan dari alasan
                 yang kita cari.”
               </p>
-              <span class="”actor-name”">— Bryan Domani</span>
+              <span class="actor-name">— Bryan Domani</span>
             </div>
 
             <div class="note-item">
               <img
-                src="img/cinema note/sheila.jpg"
+                src="img/aktoraktris/sheila.jpg"
                 alt="Sheila Dara"
                 loading="lazy"
               />
@@ -168,12 +423,12 @@
                 “Tak semua luka harus disembunyikan. Sebagian mengajarkan kita
                 arah.”
               </p>
-              <span class="”actor-name”">— Sheila Dara</span>
+              <span class="actor-name">— Sheila Dara</span>
             </div>
 
             <div class="note-item">
               <img
-                src="img/cinema note/mawar.jpg"
+                src="img/aktoraktris/mawar.jpg"
                 alt="Mawar Eva de Jongh"
                 loading="lazy"
               />
@@ -181,7 +436,7 @@
                 “Hati yang tulus tak pernah sia-sia, meski tak selalu
                 dimengerti.”
               </p>
-              <span class="”actor-name”">— Mawar Eva de Jongh</span>
+              <span class="actor-name">— Mawar Eva de Jongh</span>
             </div>
           </div>
         </aside>
@@ -193,5 +448,42 @@
     <script src="js/data-film.js"></script>
     <script src="js/detail-film.js"></script>
     <script src="js/footer.js"></script>
+    <script>
+      function populateTrendingFilms() {
+        const trendingFilms = filmCatalog
+          .filter((f) => f.section === "hits")
+          .slice(0, 3);
+        const trendingGrid = document.getElementById("trendingGrid");
+
+        if (trendingGrid && trendingFilms.length > 0) {
+          trendingGrid.innerHTML = trendingFilms
+            .map((film, index) => {
+              const badgeClass =
+                index === 0 ? "badge-1" : index === 1 ? "badge-2" : "badge-3";
+              const badgeNum = index + 1;
+              return `
+                <a href="film-detail.html?slug=${film.slug}" class="trending-card">
+                  <div class="trending-card-wrapper">
+                    <img src="${film.poster}" alt="${film.title}" loading="lazy" />
+                    <div class="trending-badge ${badgeClass}">${badgeNum}</div>
+                  </div>
+                  <h3 class="trending-card-title">${film.title}</h3>
+                  <div class="trending-card-meta">
+                    <span class="trending-card-genre">${film.genres[0] || "Film"}</span>
+                    <span class="trending-card-rating">⭐ 4.5 / 5.0</span>
+                  </div>
+                </a>
+              `;
+            })
+            .join("");
+        }
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", populateTrendingFilms);
+      } else {
+        populateTrendingFilms();
+      }
+    </script>
   </body>
 </html>
